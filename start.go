@@ -60,5 +60,7 @@ func resumeUkontainer(context *cli.Context, container string) error {
 		}
 	}()
 
+	proc.Wait()
+
 	return nil
 }
