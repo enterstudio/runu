@@ -52,7 +52,7 @@ fold_end test.1
 
 # test ping
 fold_start test.2 "test ping"
-cat config.json | jq '.process.args |=["ping","127.0.0.1"] ' > $HOME/tmp/bundle/config.json
+cat config.json | jq '.process.args |=["ping", "-c5", "127.0.0.1"] ' > $HOME/tmp/bundle/config.json
 run_test
 fold_end test.2
 
